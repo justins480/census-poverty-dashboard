@@ -1,10 +1,16 @@
 #!/usr/bin/env python
 # coding: utf-8
 
+<<<<<<< HEAD
 # In[7]:
 
 
 import os
+=======
+# In[2]:
+
+
+>>>>>>> 1e9a7eb782d51e523bf66d01533a97d034bb1ee6
 import requests
 import json
 import pandas as pd
@@ -12,7 +18,10 @@ import plotly.express as px
 from dash import Dash, dcc, html
 from dash.dependencies import Input, Output
 import dash_bootstrap_components as dbc
+<<<<<<< HEAD
 from IPython.display import display
+=======
+>>>>>>> 1e9a7eb782d51e523bf66d01533a97d034bb1ee6
 
 # Define the API endpoint and parameters
 url = "https://api.census.gov/data/timeseries/poverty/histpov2"
@@ -25,8 +34,11 @@ params = {
 # Function to get data from the API
 def get_census_data(url, params):
     response = requests.get(url, params=params)
+<<<<<<< HEAD
     print(f"Response status code: {response.status_code}")
     print(f"Response content: {response.text[:200]}")  # Print the first 200 characters of the response for debugging
+=======
+>>>>>>> 1e9a7eb782d51e523bf66d01533a97d034bb1ee6
     if response.status_code == 200:
         try:
             return response.json()
@@ -36,6 +48,10 @@ def get_census_data(url, params):
             raise
     else:
         print("Non-200 status code received")
+<<<<<<< HEAD
+=======
+        print("Response status code:", response.status_code)
+>>>>>>> 1e9a7eb782d51e523bf66d01533a97d034bb1ee6
         print("Response content:", response.text)
         response.raise_for_status()
 
@@ -114,7 +130,11 @@ def update_table(selected_year):
 
 # Run the app
 if __name__ == '__main__':
+<<<<<<< HEAD
     app.run_server(mode='inline', debug=True)
+=======
+    app.run_server(debug=True)
+>>>>>>> 1e9a7eb782d51e523bf66d01533a97d034bb1ee6
 
 
 # In[ ]:
