@@ -130,11 +130,7 @@ def update_table(selected_year):
 
 # Run the app
 if __name__ == '__main__':
-<<<<<<< HEAD
-    app.run_server(mode='inline', debug=True)
-=======
     app.run_server(debug=True)
->>>>>>> 1e9a7eb782d51e523bf66d01533a97d034bb1ee6
 
 
 # In[ ]:
